@@ -1,0 +1,16 @@
+C:\Users\William\Desktop\lethalMods\increasedDeadlines\bin\Debug\netstandard2.1\increasedDeadlines.deps.json
+C:\Users\William\Desktop\lethalMods\increasedDeadlines\bin\Debug\netstandard2.1\increasedDeadlines.dll
+C:\Users\William\Desktop\lethalMods\increasedDeadlines\bin\Debug\netstandard2.1\increasedDeadlines.pdb
+C:\Users\William\Desktop\lethalMods\increasedDeadlines\bin\Debug\netstandard2.1\Assembly-CSharp.dll
+C:\Users\William\Desktop\lethalMods\increasedDeadlines\bin\Debug\netstandard2.1\Unity.InputSystem.dll
+C:\Users\William\Desktop\lethalMods\increasedDeadlines\bin\Debug\netstandard2.1\Unity.Netcode.Runtime.dll
+C:\Users\William\Desktop\lethalMods\increasedDeadlines\bin\Debug\netstandard2.1\Unity.TextMeshPro.dll
+C:\Users\William\Desktop\lethalMods\increasedDeadlines\obj\Debug\netstandard2.1\increasedDeadlines.csproj.AssemblyReference.cache
+C:\Users\William\Desktop\lethalMods\increasedDeadlines\obj\Debug\netstandard2.1\PluginInfo.cs
+C:\Users\William\Desktop\lethalMods\increasedDeadlines\obj\Debug\netstandard2.1\increasedDeadlines.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\William\Desktop\lethalMods\increasedDeadlines\obj\Debug\netstandard2.1\increasedDeadlines.AssemblyInfoInputs.cache
+C:\Users\William\Desktop\lethalMods\increasedDeadlines\obj\Debug\netstandard2.1\increasedDeadlines.AssemblyInfo.cs
+C:\Users\William\Desktop\lethalMods\increasedDeadlines\obj\Debug\netstandard2.1\increasedDeadlines.csproj.CoreCompileInputs.cache
+C:\Users\William\Desktop\lethalMods\increasedDeadlines\obj\Debug\netstandard2.1\increasedDeadlines.csproj.CopyComplete
+C:\Users\William\Desktop\lethalMods\increasedDeadlines\obj\Debug\netstandard2.1\increasedDeadlines.dll
+C:\Users\William\Desktop\lethalMods\increasedDeadlines\obj\Debug\netstandard2.1\increasedDeadlines.pdb
