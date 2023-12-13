@@ -19,7 +19,6 @@ namespace increasedDeadlines
         public static ConfigEntry<bool> configDebug;
         internal static IncreasedDeadlinesMod Instance;
         public static int quotaCheck = 0;
-        internal static bool isHost;
         public Harmony harmony = new Harmony(modGUID);
         public static ManualLogSource logSrc = BepInEx.Logging.Logger.CreateLogSource("loggingSource");
         private const string modName = "Increased Deadlines";
@@ -70,13 +69,6 @@ namespace increasedDeadlines
                 Logger.LogInfo(configGreeting.Value);
             }
             harmony.PatchAll();
-        }
-
-        [HarmonyPatch(typeof(RoundManager), "Start")]
-        [HarmonyPrefix]
-        public static void GetHost() {
-            isHost = ((NetworkBehaviour)RoundManager.Instance).NetworkManager.IsHost;
-            logSrc.LogMessage($"Is host: {isHost}");
         }
     }
 }

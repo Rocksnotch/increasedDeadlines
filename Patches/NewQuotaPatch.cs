@@ -13,10 +13,11 @@ namespace IncreasedDeadlines.NewQuotaPatch {
         [HarmonyPatch(nameof(TimeOfDay.SetNewProfitQuota))]
         [HarmonyPostfix]
         static void NewQuota(TimeOfDay __instance) {
+            bool isHost = RoundManager.Instance.IsHost;
             int checkQuota = __instance.profitQuota / IncreasedDeadlinesMod.quotaCheck;
 
             if (checkQuota > 0) {
-                if (IncreasedDeadlinesMod.isHost) {
+                if (isHost) {
                     __instance.timeUntilDeadline = (float)(__instance.quotaVariables.deadlineDaysAmount + checkQuota) * __instance.totalTime;
                     IncreasedDeadlinesMod.logSrc.LogInfo($"Quota check is {checkQuota}, timeUntilDeadline is {__instance.timeUntilDeadline}");
                     TimeOfDay.Instance.SyncTimeClientRpc(__instance.globalTime, (int)__instance.timeUntilDeadline);

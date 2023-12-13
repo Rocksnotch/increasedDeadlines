@@ -16,13 +16,15 @@ namespace IncreasedDeadlines.HostDebug {
         static KeyControl debugKey = Keyboard.current.numpad5Key;
         [HarmonyPostfix]
         public static void DebugQuotaFulfilled(TimeOfDay __instance) {
-            if (debugKey.wasPressedThisFrame && IncreasedDeadlinesMod.configDebug.Value && RoundManager.Instance.IsHost) {
+            bool host = RoundManager.Instance.IsHost;
+            if (debugKey.wasPressedThisFrame && IncreasedDeadlinesMod.configDebug.Value && host) {
                 IncreasedDeadlinesMod.logSrc.LogInfo("Host pressed num5, increasing quota fulfilled by 100");
+                IncreasedDeadlinesMod.logSrc.LogInfo($"Is host: {host}");
                 __instance.quotaFulfilled += 100;
                 StartOfRound.Instance.profitQuotaMonitorText.text = $"PROFIT QUOTA:\n${__instance.quotaFulfilled} / ${__instance.profitQuota}";
-            } else if (debugKey.wasPressedThisFrame && !IncreasedDeadlinesMod.configDebug.Value && RoundManager.Instance.IsHost) {
+            } else if (debugKey.wasPressedThisFrame && !IncreasedDeadlinesMod.configDebug.Value && host) {
                 IncreasedDeadlinesMod.logSrc.LogWarning("Host pressed num5, but debug mode is disabled");
-            } else if (debugKey.wasPressedThisFrame && !RoundManager.Instance.IsHost) {
+            } else if (debugKey.wasPressedThisFrame && !host) {
                 IncreasedDeadlinesMod.logSrc.LogWarning("Not host, wont do anything.");
             }
         }
